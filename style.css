@@ -18,6 +18,10 @@ body{
 .first-page img{
     width: 100%;
 }
+.first-page:hover .photo{
+    transform: skew(-30deg);
+    transition: transform 2s ease-in-out;
+}
 h1{
     font-size: 64px;
     color: white;
@@ -63,6 +67,9 @@ h1{
 .player-info{
     color: #6C6C6C;
 }
+
+/* this is our footer area  */
+
 .footer-area{
     display: flex;
     flex-direction: column;
@@ -75,6 +82,39 @@ h1{
     width: 483px;
     height: 110px;
 }
+.social-media{
+    margin-left: 14px;
+}
 .footer-area p{
     font-size: 10px;
+}
+
+
+
+/* ------- media quire for risposive our website ------- */
+
+
+/* ------- Mobile device ------- */
+@media only screen and (max-width:688px) {
+    .first-page, .football-players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-area{
+        margin-left: 0px;
+    }
+    
+}
+
+/* ----- tablate device ------- */
+@media only screen and (min-width:688px)and (max-width:992px) {
+    .first-page{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .football-players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-area{
+        margin-left: 160px;
+    }
+    
 }
